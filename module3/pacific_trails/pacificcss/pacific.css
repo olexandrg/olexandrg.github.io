@@ -1,0 +1,45 @@
+/*
+Assignment Name: Pacific Trails Resort Case Study
+File Name: pacific.css
+Date: 1/24/2019
+Programmer: Olexandr Goloshchapov
+*/
+body {
+    background-color:#ffffff;
+    color:#666666;
+    font-family:Verdana,Arial,sans-serif;
+}
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+}
+header {
+    background-color:#000033;
+    color:#ffffff;
+    font-family:Georgia,serif;
+}
+h1 {
+    line-height:200%;
+}
+nav {
+    font-weight:bold;
+    background-color:#90c7e3;
+}
+h2 {
+    color:#3399cc;
+    font-family:Georgia,serif;
+}
+dt {
+    color:#000033;
+    font-weight:bold;
+}
+.resort {
+    color:#000033;
+    font-size:1.2em;
+}
+footer {
+    font-size:0.70em;
+    text-align:center;
+    font-style:italic;
+}

@@ -1,0 +1,148 @@
+/* 
+Portland Tour Company stylesheet
+File names: styles.css
+Date: 1/31/2019
+Programmer: Olexandr Goloshchapov
+*/
+body {
+    margin:0;
+    min-height:100vh;
+    background-color:#D7FFED;
+    display:flex;
+    flex-direction:column;
+}
+.wrapper {
+    min-height:100%;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.top-content {
+    background-color:#424242;
+    border:1px solid #9ab7aa;
+    border-radius: 120px 10px 10px 120px;
+    box-shadow:10px 15px 20px #acccbd;
+    margin-top:0.5em; 
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:nowrap;
+}
+.logo {
+    background-image:url('images/logo.png');
+    background-repeat:no-repeat;
+    background-position:left;
+    background-size:225px 210px;
+    height:220px;
+    width:225px;
+}
+.company-name{
+    font-family:'Eczar',sans-serif;
+    color:whitesmoke;
+    text-shadow:2px 4px 2px #38B094;
+    font-size:2.7em;
+}
+.company-slogan {
+    font-family:'Dancing Script',sans-serif;
+    font-style:italic;
+    color:#ffffea;
+    font-size:1.4em;
+    font-weight:100;
+    padding-right:2em;
+}
+.navigation-bar {
+    background-color:#4E3435;
+    height:auto;
+    margin-top:1em;
+    border:1px solid #9ab7aa;
+    border-radius:10px;
+    box-shadow:10px 15px 20px #acccbd;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:nowrap;
+    padding:1em;
+}
+nav a {
+    font-family:'Rubik Mono One',sans-serif;
+    color:whitesmoke;
+    font-size:2em;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+nav a:hover {
+    color:#35B592;
+}
+.parent-main-container {
+    margin-top:1em;
+    margin-bottom:1em;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.child-left-container img {
+    max-width:60%; 
+    box-shadow:10px 10px 15px #424242;
+    border:1px solid #3b3b3b;
+    border-radius:5px;
+}
+.child-left-container, .child-bottom-left-container {
+    flex:2;
+}
+.child-right-container, .child-bottom-right-container{
+    flex:1;
+    justify-content:center;
+}
+p {
+    font-family:'Roboto',sans-serif;
+    font-size:1.2em;
+    color:#3C312F;
+}
+.parent-bottom-container {
+    margin-bottom:1em;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+}
+.parent-bottom-container img {
+    max-width:60%;
+    box-shadow:10px 10px 15px #424242;
+    border:1px solid #3b3b3b;
+    border-radius:5px;
+}
+.child-bottom-right-container ul {
+    list-style:none;
+    line-height:2em;
+    font-family:'Proza Libre',sans-serif;
+    color:#3C312F;
+    font-size:1.5em;
+    font-weight:bold;
+}
+footer {
+    margin-top:auto; /*sticks the footer to the bottom*/
+    margin-bottom:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:1em;
+    height:3em;
+    background-color:#333333;
+    border-top: 0.4em solid #41A082;
+}
+footer p {
+    font-family:'Roboto',sans-serif;
+    color:#848484;
+    font-size:0.7em;
+    /* font-style:italic; */
+    padding:1em;
+}
+footer a {
+    text-decoration:none;
+}
+footer img {
+    margin-right:2em;
+}
+.footer-elements {
+    color:#d6d6d6;
+}
