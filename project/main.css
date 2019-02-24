@@ -1,7 +1,7 @@
 /* 
 Portland Tour Company stylesheet
 File names: styles.css
-Date: 1/31/2019
+Date: 2/21/2019
 Programmer: Olexandr Goloshchapov
 */
 body {
@@ -72,9 +72,27 @@ nav a {
 nav a:hover {
     color:#35B592;
 }
+h1, h2 {
+    font-family:'Roboto',sans-serif;
+    color:#3C312F;
+}
+h2 {
+    font-size:1.2em;
+}
+/* List CSS */
+.parent-list-container {
+    display:flex;
+    justify-content:space-evenly;
+}
+div ul, ol {
+    font-family:'Roboto',sans-serif;
+}
+div ul {
+    list-style:none;
+}
 .parent-main-container {
-    margin-top:1em;
-    margin-bottom:1em;
+    padding-top:1em;
+    padding-bottom:1em;
     display:flex;
     flex-direction:row;
     align-items:center;
@@ -86,39 +104,25 @@ nav a:hover {
     border:1px solid #3b3b3b;
     border-radius:5px;
 }
-.child-left-container, .child-bottom-left-container {
+.child-left-container {
     flex:2;
 }
-.child-right-container, .child-bottom-right-container{
+.child-right-container {
     flex:1;
-    justify-content:center;
 }
 p {
     font-family:'Roboto',sans-serif;
     font-size:1.2em;
     color:#3C312F;
 }
-.parent-bottom-container {
-    margin-bottom:1em;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    align-items:center;
-}
-.parent-bottom-container img {
-    max-width:60%;
-    box-shadow:10px 10px 15px #424242;
-    border:1px solid #3b3b3b;
-    border-radius:5px;
-}
-.child-bottom-right-container ul {
+/* .child-right-container ul {
     list-style:none;
     line-height:2em;
-    font-family:'Proza Libre',sans-serif;
-    color:#3C312F;
+    font-family:'Roboto',sans-serif;
+    color:#3C312F; 
     font-size:1.5em;
     font-weight:bold;
-}
+} */
 footer {
     margin-top:auto; /*sticks the footer to the bottom*/
     margin-bottom:0;
@@ -128,21 +132,59 @@ footer {
     padding:1em;
     height:3em;
     background-color:#333333;
-    border-top: 0.4em solid #41A082;
+    border-top:0.4em solid #41A082;
 }
 footer p {
     font-family:'Roboto',sans-serif;
     color:#848484;
     font-size:0.7em;
-    /* font-style:italic; */
     padding:1em;
+}
+footer ul {
+    font-family:'Roboto',sans-serif;
+    color:#d6d6d6;
+    font-size:0.7em;
+    list-style:none;
+    padding:0em 2em 0em 2em;
 }
 footer a {
     text-decoration:none;
 }
 footer img {
-    margin-right:2em;
+    padding:0.25em;
+    width:30px;
+    height:30px;
 }
 .footer-elements {
     color:#d6d6d6;
+}
+.mobile-container {
+    display:none;
+}
+/* smartphone CSS */
+@media only screen and (max-device-width:768px) {
+    .company-slogan {
+        display:none;
+    }
+    .company-name {
+        padding-right:1em;
+    }
+    .mobile-container {
+        display:flex;
+        padding:1em;
+    }
+    .mobile-container img {
+        width:auto;
+        max-width:100%;
+        height:auto;
+    }
+    .navigation-bar {
+        padding:2em;
+    }
+    nav a {
+        font-size:2.2em;
+    }
+    .child-left-container {
+        display:none;
+    }
 }
