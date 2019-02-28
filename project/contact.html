@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<!-- 
+Assignment Name: Portland Tour Company Home page
+File Name: contact.html
+Date: 2/27/2019
+Programmer: Olexandr Goloshchapov
+-->
+<html lang="en"> 
+<head>
+    <meta charset="utf-8">
+    <title>Portland Historical Tours - Contact</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script%7CEczar%7CRoboto%7CRubik+Mono+One%7CProza+Libre" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="top-content">
+            <div class="logo"></div> <!-- company logo-->
+            <div class="company-name">
+                <h3>Portland Historical Tours</h3>
+            </div>
+            <div class="company-slogan">
+                <h4>In business for over 33 years!</h4>
+            </div>
+        </header>
+        <nav class="navigation-bar">
+            <a href="index.html">home</a>
+            <a href="tours.html">tours</a>
+            <a href="book.html">book</a>
+            <a href="news.html">news</a>
+            <a href="contact.html">contact</a>
+        </nav>
+        <main>
+            <div class="parent-contact-container">
+                 <div class="child-left-container">
+                    <img src="images/downtown.png" alt="downtown">
+                </div>
+                <div class="child-right-container">
+                    <h1>Contact Us</h1>
+                    <p>We respond within 24 hours!</p>
+                    <p>Please note: required information is marked with an asterisk (*)</p>
+                    <form class="contact" method="post" action="contact.php">
+                        <label for="myFName">* Name:</label>
+                        <input type="text" name="myFName" id="myFName" required>
+                        <label for="myEmail">* E-mail:</label>
+                        <input type="email" name="myEmail" id="myEmail" required>
+                        <label for="mySubject">Subject:</label>
+                        <input type="text" name="mySubject" id="mySubject">
+                        <label for="myComments">Comments:</label>
+                        <textarea name="myComments" id="myComments" cols=2 rows=4 maxlength=120></textarea>
+                        <button id="submitButton" name="submit">Submit &#x2714;</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2019 <a href="mailto:portlandtourco@mail.to"><span class="footer-elements">Portland Tour Company</span></a> |  All Rights Reserved | Website Development by <a href="mailto:olexandr.goloshchapov@pcc.edu"><span class="footer-elements">Olexandr Goloshchapov</span></a></p>
+        <div class="mobile-container">
+            <a href="tel:503-555-1234">503-555-1234</a>
+        </div>
+        <ul>
+            <li>Portland Historical Tours</li>
+            <li>1200 NW Naito Parkway</li>
+            <li>Portland, OR 97209</li>
+            <li>503-555-1234</li>
+        </ul>
+        <a href="#">
+            <img src="images/facebook.png" alt="facebook">
+        </a>
+        <a href="#">
+            <img src="images/twitter.png" alt="facebook">            
+        </a>
+    </footer>
+</body>
+</html>

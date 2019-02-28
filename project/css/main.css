@@ -1,7 +1,7 @@
 /* 
 Portland Tour Company stylesheet
 File names: styles.css
-Date: 2/21/2019
+Date: 2/27/2019
 Programmer: Olexandr Goloshchapov
 */
 body {
@@ -13,7 +13,7 @@ body {
 }
 .wrapper {
     min-height:100%;
-    width:90%;
+    width:80%;
     margin-left:auto;
     margin-right:auto;
 }
@@ -29,7 +29,7 @@ body {
     flex-wrap:nowrap;
 }
 .logo {
-    background-image:url('images/main-logo.png');
+    background-image:url('../images/main-logo.png');
     background-repeat:no-repeat;
     background-position:left;
     background-size:225px 210px;
@@ -84,19 +84,28 @@ h2 {
     display:flex;
     justify-content:space-evenly;
 }
-div ul, ol {
+/* div ul, ol {
     font-family:'Roboto',sans-serif;
-}
-div ul {
+    font-size:1.2em;
+} */
+div ul, p {
     list-style:none;
+    /* font-size:1em; */
 }
-.parent-main-container {
+.parent-main-container, .parent-tours-container {
     padding-top:1em;
     padding-bottom:1em;
     display:flex;
     flex-direction:row;
     align-items:center;
     flex-wrap:wrap;
+    border-bottom:1em solid rgba(0, 0, 0, 0.2) /*#4E3435*/;
+    border-radius:5px;
+    box-shadow:0 8px 6px -6px rgba(0, 0, 0, 0.3);
+}
+.parent-tours-container {
+    flex-direction:column;
+    align-items:flex-start;
 }
 .child-left-container img {
     max-width:60%; 
@@ -110,19 +119,44 @@ div ul {
 .child-right-container {
     flex:1;
 }
-p {
+/* Contact CSS */
+.parent-contact-container { /* same as main, but aligned horizontally */
+    padding-top:1em;
+    padding-bottom:1em;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+form.contact {
+    display:flex;
+    flex-direction:column;
+    width:50%;
+}
+input, textarea {
+    margin-bottom:0.5em;
+}
+#submitButton {
     font-family:'Roboto',sans-serif;
+    background-color:#3C312F;
+    color:whitesmoke;
+    border-radius:10px;
     font-size:1.2em;
+    padding:0.2em;
+    border:1px solid #4f4543;
+    cursor:pointer;
+}
+#submitButton:hover {
+    color:#41A082;
+}
+img {
+    width:100%;
+    height:auto;
+}
+p, label, ul, ol {
+    font-family:'Roboto',sans-serif;
+    font-size:1em;
     color:#3C312F;
 }
-/* .child-right-container ul {
-    list-style:none;
-    line-height:2em;
-    font-family:'Roboto',sans-serif;
-    color:#3C312F; 
-    font-size:1.5em;
-    font-weight:bold;
-} */
 footer {
     margin-top:auto; /*sticks the footer to the bottom*/
     margin-bottom:0;
@@ -158,25 +192,34 @@ footer img {
 .footer-elements {
     color:#d6d6d6;
 }
-.mobile-container {
+.mobile-container a {
     display:none;
 }
-/* smartphone CSS */
-@media only screen and (max-device-width:768px) {
+/* Prevent company slogan from collapsing */
+@media only screen and (max-width:1345px) {
     .company-slogan {
         display:none;
     }
     .company-name {
         padding-right:1em;
     }
-    .mobile-container {
-        display:flex;
-        padding:1em;
+}
+/* smartphone CSS */
+@media only screen and (max-device-width:768px) {
+    .wrapper {
+        width:95%;
     }
-    .mobile-container img {
-        width:auto;
-        max-width:100%;
-        height:auto;
+    p, ul, ol {
+        font-size:1.5em;
+    }
+    .company-slogan {
+        display:none;
+    }
+    .company-name {
+        padding-right:1em;
+    }
+    main img {
+        display:none;
     }
     .navigation-bar {
         padding:2em;
@@ -184,7 +227,40 @@ footer img {
     nav a {
         font-size:2.2em;
     }
+    .parent-contact-container {
+        font-size:2em;
+        flex-direction:row; /* was column */
+        align-items:center;
+    }
     .child-left-container {
         display:none;
+    }
+    input, textarea {
+        font-size:1.5em;
+        margin-bottom:1em;
+        /* padding:1em; */
+    }
+    footer {
+        margin-bottom:0;
+        justify-content:flex-end;
+    }
+    footer ul {
+        display:none;
+    }
+    footer img {
+        padding-right:1em;
+        width:50px;
+        height:50px;
+    }
+    footer p {
+        display:none;
+    }
+    .mobile-container a {
+        font-family:'Roboto';
+        display:flex;
+        display:block;
+        color:whitesmoke;
+        font-size:2em;
+        padding:1em;
     }
 }
