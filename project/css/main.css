@@ -123,6 +123,13 @@ main a {
     flex-direction:row;
     flex-wrap:wrap;
 }
+#contact {
+    box-shadow:0px 0px 1rem #424242;
+    border:1px solid #424242;
+    border-radius:5px;
+    padding:1em 4em;
+    background-color: #e6e6e6;
+}
 form.contact {
     display:flex;
     flex-direction:column;
